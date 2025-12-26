@@ -1,0 +1,26 @@
+{
+  "Runnable_Percentage": 98.99,
+  "Incorrect_Percentage": 1.01,
+  "Redundant_Percentage": 21.21,
+  "Irrelevant_Percentage": 4.04,
+  "Correction_Rate_Percentage": 0.0,
+  "Issues": {
+    "Runnable_Issues_Exist": true,
+    "Output_Mismatch_Exists": true,
+    "Incorrect_Exists": true,
+    "Redundant_Exists": true,
+    "Irrelevant_Exists": true
+  },
+  "Checklist": {
+    "C1_All_Runnable": "FAIL",
+    "C2_All_Correct": "FAIL",
+    "C3_No_Redundant": "FAIL",
+    "C4_No_Irrelevant": "FAIL"
+  },
+  "Rationale": {
+    "C1_All_Runnable": "1 block failed to run: generate_labels.py main() - uses undefined args.skip_lettuce and args.skip_llm_judge",
+    "C2_All_Correct": "1 block has incorrect implementation: generate_labels.py main() - uses undefined arguments",
+    "C3_No_Redundant": "21 duplicate utility functions found across scripts (load_and_balance_data, save_dataset, generate_judge_prompt duplicated in multiple baseline scripts)",
+    "C4_No_Irrelevant": "4 visualization helper functions are not core to the analysis (plot_binary_correlation, analyze_scores, create_confusion_matrix_plot, create_feature_importance_plot)"
+  }
+}

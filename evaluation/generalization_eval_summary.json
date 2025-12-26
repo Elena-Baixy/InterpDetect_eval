@@ -1,0 +1,12 @@
+{
+  "Checklist": {
+    "GT1_ModelGeneralization": "FAIL",
+    "GT2_DataGeneralization": "PASS",
+    "GT3_MethodGeneralization": "PASS"
+  },
+  "Rationale": {
+    "GT1_ModelGeneralization": "The PKS (Parametric Knowledge Score) correlation with hallucination does not generalize from Qwen3-0.6B to GPT-2-small. In 3 trial examples (13 spans), hallucinated spans showed LOWER later-layer PKS (mean=88.78) compared to truthful spans (mean=95.79), which is the OPPOSITE direction of the original finding. The neuron-level pattern (later-layer FFNs show higher PKS for hallucinated responses) appears to be model-specific rather than a general property across different architectures.",
+    "GT2_DataGeneralization": "The trained SVC classifier successfully generalizes to new data instances from the FinQA test set (256 examples, 975 spans) that were not used during training. The classifier achieved 76.41% accuracy and F1=0.6494 at span level, and F1=0.7468 at response level. In 3 trial examples, all predictions were correct at response level (3/3), demonstrating robust generalization to unseen data.",
+    "GT3_MethodGeneralization": "The paper proposes a new method (ECS/PKS-based hallucination detection). Code analysis shows the compute_scores.py script has NO domain-specific logic - it works with generic input format (prompt + spans, response + spans). The method framework is architecturally transferable to at least 3 similar tasks: (1) summarization faithfulness detection, (2) open-domain QA hallucination detection, (3) reading comprehension verification. All these tasks share the context-response structure required by the ECS/PKS computation."
+  }
+}
