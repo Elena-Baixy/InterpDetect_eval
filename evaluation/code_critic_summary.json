@@ -1,0 +1,26 @@
+{
+  "Runnable_Percentage": 96.7032967032967,
+  "Incorrect_Percentage": 1.098901098901099,
+  "Redundant_Percentage": 18.681318681318682,
+  "Irrelevant_Percentage": 0.0,
+  "Correction_Rate_Percentage": 0.0,
+  "Issues": {
+    "Runnable_Issues_Exist": true,
+    "Output_Mismatch_Exists": true,
+    "Incorrect_Exists": true,
+    "Redundant_Exists": true,
+    "Irrelevant_Exists": false
+  },
+  "Checklist": {
+    "C1_All_Runnable": "FAIL",
+    "C2_All_Correct": "FAIL",
+    "C3_No_Redundant": "FAIL",
+    "C4_No_Irrelevant": "PASS"
+  },
+  "Rationale": {
+    "C1_All_Runnable": "3 blocks failed: setup_models and calculate_sentence_similarity due to HuggingFace hub permission errors; generate_labels.py main due to undefined args",
+    "C2_All_Correct": "1 block incorrect: generate_labels.py main function references undefined arguments skip_lettuce and skip_llm_judge",
+    "C3_No_Redundant": "17 blocks are redundant: load_and_balance_data, save_dataset, generate_judge_prompt, and evaluate functions are duplicated across multiple baseline scripts",
+    "C4_No_Irrelevant": "All code blocks contribute to the project goal of hallucination detection"
+  }
+}

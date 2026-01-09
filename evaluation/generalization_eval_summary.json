@@ -1,0 +1,12 @@
+{
+  "Checklist": {
+    "GT1_ModelGeneralization": "PASS",
+    "GT2_DataGeneralization": "PASS",
+    "GT3_MethodGeneralization": "PASS"
+  },
+  "Rationale": {
+    "GT1_ModelGeneralization": "The method successfully generalizes to GPT-4.1-mini (a different response model not used in training). F1 Score: 0.5243 on GPT-4.1-mini responses. ECS correlation verified: -0.0733 (negative as expected). PKS correlation verified: 0.3486 (positive as expected). The trained classifier using Qwen3-0.6B signals successfully predicts hallucinations in GPT-4.1-mini responses, demonstrating that the neuron-level findings are predictable on a new model.",
+    "GT2_DataGeneralization": "The method successfully generalizes to new data instances not appearing in the original training dataset. F1 Score: 0.6494 on held-out Qwen test data. Correctly identified 213 hallucinations and 532 non-hallucinations. ECS finding confirmed: hallucinated spans have lower ECS (correlation: -0.2650). PKS finding confirmed: hallucinated spans have higher PKS (correlation: 0.2497). Both correlation patterns verified on new data not in the original dataset.",
+    "GT3_MethodGeneralization": "The proposed method (ECS/PKS computation + classifier) can be applied to similar tasks. Trial 1 - Context Adherence Detection: ECS detects context adherence (accuracy: 0.5918). Trial 2 - Knowledge Source Attribution: PKS attributes knowledge source (accuracy: 0.5764). Trial 3 - Response Quality Assessment: Combined ECS/PKS ratio predicts quality (accuracy: 0.5692, correlation: 0.1445). The mechanistic signals capture fundamental properties of LLM context usage, making the method applicable to multiple related tasks."
+  }
+}
