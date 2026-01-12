@@ -1,0 +1,12 @@
+{
+  "Checklist": {
+    "GT1_ModelGeneralization": "PASS",
+    "GT2_DataGeneralization": "PASS",
+    "GT3_MethodGeneralization": "PASS"
+  },
+  "Rationale": {
+    "GT1_ModelGeneralization": "Tested on Pythia-1.4B (not in original work). PKS finding: True, ECS finding: False. At least one correlation pattern was replicated.",
+    "GT2_DataGeneralization": "Tested on 3 new synthetic RAG examples. Hallucinated examples had higher PKS ratio (9.5579) vs truthful (8.1528). Finding holds: True",
+    "GT3_MethodGeneralization": "Applied PKS method to summarization factuality detection. Unfaithful summaries had higher late-layer PKS (20.2623) vs faithful (20.0542). Method transfers: True"
+  }
+}

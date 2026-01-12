@@ -1,0 +1,228 @@
+{
+  "training_results": [
+    {
+      "Model": "LogisticRegression",
+      "Train_Precision": 0.8044368600682594,
+      "Train_Recall": 0.7717747216764899,
+      "Train_F1": 0.7877673796791443,
+      "Val_Precision": 0.7299703264094956,
+      "Val_Recall": 0.7256637168141593,
+      "Val_F1": 0.727810650887574
+    },
+    {
+      "Model": "SVC",
+      "Train_Precision": 0.8431237042156186,
+      "Train_Recall": 0.7989521938441388,
+      "Train_F1": 0.82044384667115,
+      "Val_Precision": 0.7680722891566265,
+      "Val_Recall": 0.7522123893805309,
+      "Val_F1": 0.7600596125186289
+    },
+    {
+      "Model": "RandomForest",
+      "Train_Precision": 0.8013176144244105,
+      "Train_Recall": 0.7567125081859856,
+      "Train_F1": 0.7783765577635567,
+      "Val_Precision": 0.7522388059701492,
+      "Val_Recall": 0.7433628318584071,
+      "Val_F1": 0.7477744807121661
+    },
+    {
+      "Model": "XGBoost",
+      "Train_Precision": 1.0,
+      "Train_Recall": 0.9963981663392273,
+      "Train_F1": 0.9981958340167295,
+      "Val_Precision": 0.7385057471264368,
+      "Val_Recall": 0.7581120943952803,
+      "Val_F1": 0.7481804949053857
+    }
+  ],
+  "test_results": [
+    {
+      "model": "LogisticRegression",
+      "dataset": "Qwen (Self-eval)",
+      "span_precision": 0.5372750642673522,
+      "span_recall": 0.7572463768115942,
+      "span_f1": 0.6285714285714286,
+      "response_precision": 0.6105263157894737,
+      "response_recall": 0.90625,
+      "response_f1": 0.7295597484276729,
+      "n_responses": 256
+    },
+    {
+      "model": "LogisticRegression",
+      "dataset": "GPT-4.1-mini (Proxy)",
+      "span_precision": 0.4727272727272727,
+      "span_recall": 0.674074074074074,
+      "span_f1": 0.5557251908396946,
+      "response_precision": 0.6136363636363636,
+      "response_recall": 0.9759036144578314,
+      "response_f1": 0.7534883720930232,
+      "n_responses": 166
+    },
+    {
+      "model": "SVC",
+      "dataset": "Qwen (Self-eval)",
+      "span_precision": 0.5466321243523317,
+      "span_recall": 0.7644927536231884,
+      "span_f1": 0.6374622356495468,
+      "response_precision": 0.6170212765957447,
+      "response_recall": 0.90625,
+      "response_f1": 0.7341772151898734,
+      "n_responses": 256
+    },
+    {
+      "model": "SVC",
+      "dataset": "GPT-4.1-mini (Proxy)",
+      "span_precision": 0.4581151832460733,
+      "span_recall": 0.6481481481481481,
+      "span_f1": 0.5368098159509203,
+      "response_precision": 0.6328125,
+      "response_recall": 0.9759036144578314,
+      "response_f1": 0.7677725118483413,
+      "n_responses": 166
+    },
+    {
+      "model": "RandomForest",
+      "dataset": "Qwen (Self-eval)",
+      "span_precision": 0.5318066157760815,
+      "span_recall": 0.7572463768115942,
+      "span_f1": 0.624813153961136,
+      "response_precision": 0.6428571428571429,
+      "response_recall": 0.9140625,
+      "response_f1": 0.7548387096774194,
+      "n_responses": 256
+    },
+    {
+      "model": "RandomForest",
+      "dataset": "GPT-4.1-mini (Proxy)",
+      "span_precision": 0.44808743169398907,
+      "span_recall": 0.6074074074074074,
+      "span_f1": 0.5157232704402516,
+      "response_precision": 0.6,
+      "response_recall": 0.9759036144578314,
+      "response_f1": 0.7431192660550459,
+      "n_responses": 166
+    },
+    {
+      "model": "XGBoost",
+      "dataset": "Qwen (Self-eval)",
+      "span_precision": 0.5164556962025316,
+      "span_recall": 0.7391304347826086,
+      "span_f1": 0.6080476900149031,
+      "response_precision": 0.5778894472361809,
+      "response_recall": 0.8984375,
+      "response_f1": 0.7033639143730887,
+      "n_responses": 256
+    },
+    {
+      "model": "XGBoost",
+      "dataset": "GPT-4.1-mini (Proxy)",
+      "span_precision": 0.4251968503937008,
+      "span_recall": 0.6,
+      "span_f1": 0.4976958525345622,
+      "response_precision": 0.5694444444444444,
+      "response_recall": 0.9879518072289156,
+      "response_f1": 0.7224669603524229,
+      "n_responses": 166
+    }
+  ],
+  "pretrained_results": [
+    {
+      "model": "PreTrained_LR",
+      "dataset": "Qwen",
+      "span_precision": 0.5459317585301837,
+      "span_recall": 0.7536231884057971,
+      "span_f1": 0.6331811263318112,
+      "response_precision": 0.6290322580645161,
+      "response_recall": 0.9140625,
+      "response_f1": 0.7452229299363057,
+      "n_responses": 256
+    },
+    {
+      "model": "PreTrained_LR",
+      "dataset": "GPT-4.1-mini",
+      "span_precision": 0.4642857142857143,
+      "span_recall": 0.6259259259259259,
+      "span_f1": 0.5331230283911672,
+      "response_precision": 0.5923076923076923,
+      "response_recall": 0.927710843373494,
+      "response_f1": 0.7230046948356808,
+      "n_responses": 166
+    },
+    {
+      "model": "PreTrained_RandomForest",
+      "dataset": "Qwen",
+      "span_precision": 0.5242966751918159,
+      "span_recall": 0.7427536231884058,
+      "span_f1": 0.6146926536731634,
+      "response_precision": 0.6519337016574586,
+      "response_recall": 0.921875,
+      "response_f1": 0.7637540453074434,
+      "n_responses": 256
+    },
+    {
+      "model": "PreTrained_RandomForest",
+      "dataset": "GPT-4.1-mini",
+      "span_precision": 0.4417989417989418,
+      "span_recall": 0.6185185185185185,
+      "span_f1": 0.5154320987654321,
+      "response_precision": 0.6044776119402985,
+      "response_recall": 0.9759036144578314,
+      "response_f1": 0.7465437788018433,
+      "n_responses": 166
+    },
+    {
+      "model": "PreTrained_SVC",
+      "dataset": "Qwen",
+      "span_precision": 0.5605263157894737,
+      "span_recall": 0.7717391304347826,
+      "span_f1": 0.649390243902439,
+      "response_precision": 0.6388888888888888,
+      "response_recall": 0.8984375,
+      "response_f1": 0.7467532467532467,
+      "n_responses": 256
+    },
+    {
+      "model": "PreTrained_SVC",
+      "dataset": "GPT-4.1-mini",
+      "span_precision": 0.46551724137931033,
+      "span_recall": 0.6,
+      "span_f1": 0.5242718446601942,
+      "response_precision": 0.6290322580645161,
+      "response_recall": 0.9397590361445783,
+      "response_f1": 0.7536231884057971,
+      "n_responses": 166
+    },
+    {
+      "model": "PreTrained_XGBoost",
+      "dataset": "Qwen",
+      "span_precision": 0.535175879396985,
+      "span_recall": 0.7717391304347826,
+      "span_f1": 0.6320474777448071,
+      "response_precision": 0.585,
+      "response_recall": 0.9140625,
+      "response_f1": 0.7134146341463414,
+      "n_responses": 256
+    },
+    {
+      "model": "PreTrained_XGBoost",
+      "dataset": "GPT-4.1-mini",
+      "span_precision": 0.44502617801047123,
+      "span_recall": 0.6296296296296297,
+      "span_f1": 0.5214723926380368,
+      "response_precision": 0.5857142857142857,
+      "response_recall": 0.9879518072289156,
+      "response_f1": 0.7354260089686099,
+      "n_responses": 166
+    }
+  ],
+  "correlation_analysis": {
+    "ecs_correlation": -0.29079460474459917,
+    "ecs_pvalue": 8.000248141828155e-152,
+    "pks_correlation": 0.2806133612214406,
+    "pks_pvalue": 4.4073654574711796e-141,
+    "negative_ecs_heads": 448,
+    "total_heads": 448
+  }
+}

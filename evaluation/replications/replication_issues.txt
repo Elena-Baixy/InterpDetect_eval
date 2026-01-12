@@ -1,0 +1,5 @@
+1. Data files are pre-computed scores (ECS/PKS), not raw data - full pipeline from score extraction was not re-run.
+2. Class balancing strategy (undersampling) was inferred from code, not explicitly stated in plan.
+3. Test/validation split ratio (0.1) was inferred from code defaults.
+4. Exact hyperparameters for classifiers (e.g., max_depth=5 for RF/XGBoost) were inferred from code.
+5. The plan mentions '7,799 span-level samples' for training; actual loaded samples: 7799.

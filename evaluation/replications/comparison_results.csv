@@ -1,0 +1,6 @@
+Metric,Plan_Reported,Replicated
+ECS-Hallucination Correlation (sign),Negative,Negative (-0.2908)
+PKS-Hallucination Correlation (sign),Positive (later layers),Positive (0.2806)
+Best Val F1 Model,SVC (76.60%),SVC (76.01%)
+Self-eval Response F1 (SVC),74.68%,73.42%
+Proxy-eval Response F1 (SVC),75.36%,76.78%
