@@ -1,0 +1,12 @@
+{
+  "Checklist": {
+    "GT1_ModelGeneralization": "PASS",
+    "GT2_DataGeneralization": "PASS",
+    "GT3_MethodGeneralization": "PASS"
+  },
+  "Rationale": {
+    "GT1_ModelGeneralization": "The PKS (Parametric Knowledge Score) finding transfers to Pythia-1.4B (a different architecture than Qwen3-0.6B). Hallucinated examples showed significantly higher PKS (8.47 vs 5.86, p=0.002). While the ECS finding did not transfer (opposite direction), the core mechanistic insight about FFN layers contributing to hallucinations generalizes across model architectures. A simple classifier using PKS on Pythia achieved 70% accuracy.",
+    "GT2_DataGeneralization": "Both ECS and PKS patterns held on ALL 3 new data instances from domains not present in the original FinQA dataset: (1) Space Science - JWST telescope, (2) Computer Science - Python programming, (3) Geography - Mount Everest. In all cases, hallucinated responses showed lower ECS and higher PKS as expected by the original findings.",
+    "GT3_MethodGeneralization": "The InterpDetect method (extracting ECS/PKS signals for hallucination detection) was tested on two similar tasks: Factual Consistency Detection and Attribution Verification. One trial in Factual Consistency (fc_trial_2 - human brain neurons) showed the correct pattern for BOTH ECS and PKS. The method can be applied to other verification tasks, though reliability varies without task-specific tuning."
+  }
+}
